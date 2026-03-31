@@ -1,4 +1,4 @@
-﻿var MAX_ITERATION = 15;
+﻿const int MAX_ITERATION = 15;
 
 for (int i = 1; i <= MAX_ITERATION; i++) {
     if (i % 3 == 0) {
