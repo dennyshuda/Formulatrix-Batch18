@@ -14,7 +14,11 @@
     }
 
     static void SendPriceAnnouncement(object? sender, StatusChangedEventArgs e) {
-        Console.WriteLine($"[BAHLIL]: Price will increase 1000");
+        if (sender is Oil p) {
+            Console.WriteLine($"[BAHLIL]: Price will be increase 1000 {p.Name} - {e.Status}");
+        } else {
+            Console.WriteLine("No sender");
+        }
     }
 }
 
