@@ -4,6 +4,13 @@ MultipleCatchBlocksDemo();
 ExceptionFiltersDemo();
 
 static void MultipleCatchBlocksDemo() {
+    try {
+        int number = int.Parse("not_a_number");
+    } catch (FormatException ex) {
+        throw new Exception("salah", ex);
+    }
+
+
     Console.WriteLine("2. MULTIPLE CATCH BLOCKS DEMONSTRATION");
     Console.WriteLine("======================================");
 
