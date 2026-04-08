@@ -2,6 +2,25 @@
 DemonstrateManualEnumeration();
 
 static void DemonstrateBasicEnumeration() {
+
+    IEnumerable<int> Fibs(int fibCount) // Returns IEnumerable<int>
+{
+        for (int i = 0, prevFib = 1, curFib = 1; i < fibCount; i++) {
+            yield return prevFib; // Yields the current Fibonacci number
+            int newFib = prevFib + curFib;
+            prevFib = curFib;
+            curFib = newFib;
+        }
+    }
+
+    // ... in your main code:
+    foreach (int fib in Fibs(8)) // Consumes the sequence produced by Fibs
+    {
+        Console.Write(fib + "  ");
+    }
+
+    Console.WriteLine("");
+
     Console.WriteLine("--- 1. Basic Enumeration with foreach ---");
 
     string word = "beer";
