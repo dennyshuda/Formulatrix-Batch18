@@ -1,10 +1,37 @@
 ﻿namespace Delegates;
 
 class Program {
+    public delegate TResult Trans<TArg, TArg2, TResult>(TArg arg1, TArg2 arg2);
+
     static void Main(string[] args) {
-        BasicDelegates();
-        FuncAndActionDelegates();
-        RealWorldScenarioDemo();
+
+        Trans<int, int, int> add = (a, b) => a + b;
+        Trans<string, int, string> say = (a, b) => $"oke {a} - {b}";
+
+
+        Console.WriteLine($"Add: {add(5, 2)}");
+        Console.WriteLine($"Say: {say("Es kelapa sawit", 2)}");
+
+
+        static void CallMe<T>(Func<T, T> t, T input) {
+            T result = t(input);
+            Console.WriteLine($"Result: {result}");
+            Console.WriteLine("call me");
+        }
+
+        CallMe(msg => "Hasilnya adalah: " + msg, "ok");
+
+        static void CallMeAction<T>(Action<T> t, T input) {
+            t(input);
+        }
+
+        CallMeAction(msg => {
+            Console.WriteLine("Pesan: " + msg);
+        }, "Halo");
+
+        // BasicDelegates();
+        // FuncAndActionDelegates();
+        // RealWorldScenarioDemo();
     }
     delegate int Transformer(int x);
 
@@ -110,5 +137,5 @@ class Program {
             Progress?.Invoke(100);
         }
     }
-}
 
+}
