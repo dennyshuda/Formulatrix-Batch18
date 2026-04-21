@@ -30,6 +30,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading", "Oper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{DA439CA4-5427-4627-A8A1-FA03EC2EAF4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{A4605034-4465-4B1C-AE2A-84814E6F4D74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,10 @@ Global
 		{DA439CA4-5427-4627-A8A1-FA03EC2EAF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA439CA4-5427-4627-A8A1-FA03EC2EAF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA439CA4-5427-4627-A8A1-FA03EC2EAF4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4605034-4465-4B1C-AE2A-84814E6F4D74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4605034-4465-4B1C-AE2A-84814E6F4D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4605034-4465-4B1C-AE2A-84814E6F4D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4605034-4465-4B1C-AE2A-84814E6F4D74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
